@@ -1,0 +1,11 @@
+[package]
+name = "edsm"
+version = "0.0.0-dev+initial"
+authors = ["Nathan Lilienthal <nathan@nixpulvis.com>"]
+edition = "2018"
+
+[dependencies]
+serde = { version = "*", features = ["derive"] }
+serde_json = "*"
+chrono = { version = "*", features = ["serde"] }
+reqwest = { version = "*", features = ["blocking", "json"] }

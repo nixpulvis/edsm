@@ -1,0 +1,986 @@
+[
+  {
+    "id": 70044,
+    "id64": 1109653506427,
+    "name": "Plaa Eurk OD-A d14-32",
+    "date": "2015-08-15 21:46:03"
+  },
+  {
+    "id": 70045,
+    "id64": 1180680033018,
+    "name": "Plaa Eurk FS-Y c28-4",
+    "estimatedCoordinates": {
+      "x": -1605,
+      "y": 275,
+      "z": 195,
+      "precision": 35
+    },
+    "date": "2015-08-15 21:46:04"
+  },
+  {
+    "id": 70046,
+    "id64": 648943707633,
+    "name": "Plaa Eurk HP-X b57-0",
+    "estimatedCoordinates": {
+      "x": -1635,
+      "y": 285,
+      "z": 185,
+      "precision": 17
+    },
+    "date": "2015-08-15 21:46:04"
+  },
+  {
+    "id": 70050,
+    "id64": 242798963499162,
+    "name": "Eeshovvy SS-V c17-883",
+    "estimatedCoordinates": {
+      "x": -1245,
+      "y": -605,
+      "z": 17635,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:29"
+  },
+  {
+    "id": 70051,
+    "id64": 5748301910091,
+    "name": "Eeshovvy TV-L d8-167",
+    "date": "2015-08-15 22:13:29"
+  },
+  {
+    "id": 70052,
+    "id64": 84216924881177,
+    "name": "Eeshovvy UC-X b32-38",
+    "estimatedCoordinates": {
+      "x": -1255,
+      "y": -575,
+      "z": 17565,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:29"
+  },
+  {
+    "id": 70053,
+    "id64": 88614971392273,
+    "name": "Eeshovvy QW-Y b31-40",
+    "estimatedCoordinates": {
+      "x": -1255,
+      "y": -575,
+      "z": 17545,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:29"
+  },
+  {
+    "id": 70054,
+    "id64": 38564678672514,
+    "name": "Eeshovvy EF-B c15-140",
+    "estimatedCoordinates": {
+      "x": -1245,
+      "y": -565,
+      "z": 17515,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:30"
+  },
+  {
+    "id": 70055,
+    "id64": 43237535981690,
+    "name": "Eeshovvy ZY-C c14-157",
+    "estimatedCoordinates": {
+      "x": -1285,
+      "y": -565,
+      "z": 17475,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:30"
+  },
+  {
+    "id": 70056,
+    "id64": 51231307677929,
+    "name": "Eeshovvy TW-H b27-23",
+    "estimatedCoordinates": {
+      "x": -1275,
+      "y": -555,
+      "z": 17445,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:30"
+  },
+  {
+    "id": 70057,
+    "id64": 208883058364467,
+    "name": "Eeshovvy GD-R d5-6079",
+    "date": "2015-08-15 22:13:30"
+  },
+  {
+    "id": 70058,
+    "id64": 18245958910161,
+    "name": "Eeshovvy FJ-N b24-8",
+    "estimatedCoordinates": {
+      "x": -1275,
+      "y": -535,
+      "z": 17385,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:30"
+  },
+  {
+    "id": 70059,
+    "id64": 59967952277555,
+    "name": "Eeshovvy GD-R d5-1745",
+    "date": "2015-08-15 22:13:31"
+  },
+  {
+    "id": 70060,
+    "id64": 47117410127915,
+    "name": "Eeshovvy CX-S d4-1371",
+    "date": "2015-08-15 22:13:31"
+  },
+  {
+    "id": 70061,
+    "id64": 275531679875241,
+    "name": "Eeshovvy JJ-W b19-125",
+    "estimatedCoordinates": {
+      "x": -1275,
+      "y": -515,
+      "z": 17285,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:31"
+  },
+  {
+    "id": 70063,
+    "id64": 70450448801866,
+    "name": "Eeshovvy ZS-N c8-256",
+    "estimatedCoordinates": {
+      "x": -1285,
+      "y": -525,
+      "z": 17235,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:31"
+  },
+  {
+    "id": 70064,
+    "id64": 213958760284289,
+    "name": "Eeshovvy OE-F b15-97",
+    "estimatedCoordinates": {
+      "x": -1295,
+      "y": -515,
+      "z": 17185,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:32"
+  },
+  {
+    "id": 70065,
+    "id64": 2852527751281,
+    "name": "Eeshovvy GS-I b13-1",
+    "estimatedCoordinates": {
+      "x": -1295,
+      "y": -515,
+      "z": 17145,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:32"
+  },
+  {
+    "id": 70066,
+    "id64": 172705030217778,
+    "name": "Eeshovvy LF-T c5-628",
+    "estimatedCoordinates": {
+      "x": -1285,
+      "y": -485,
+      "z": 17115,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:32"
+  },
+  {
+    "id": 70067,
+    "id64": 112057315659795,
+    "name": "Eeshovvy OJ-Y d1-3261",
+    "date": "2015-08-15 22:13:32"
+  },
+  {
+    "id": 70068,
+    "id64": 110030091096083,
+    "name": "Eeshovvy OJ-Y d1-3202",
+    "date": "2015-08-15 22:13:32"
+  },
+  {
+    "id": 70069,
+    "id64": 108108722085922,
+    "name": "Eeshovvy DT-W c3-393",
+    "estimatedCoordinates": {
+      "x": -1285,
+      "y": -485,
+      "z": 17035,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:33"
+  },
+  {
+    "id": 70070,
+    "id64": 82851538046987,
+    "name": "Eeshovvy KD-A d1-2411",
+    "date": "2015-08-15 22:13:33"
+  },
+  {
+    "id": 70071,
+    "id64": 46832992993321,
+    "name": "Eeshovvy SY-Y b4-21",
+    "estimatedCoordinates": {
+      "x": -1295,
+      "y": -475,
+      "z": 16965,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:33"
+  },
+  {
+    "id": 70072,
+    "id64": 70450381758474,
+    "name": "Eeshovvy OF-C c1-256",
+    "estimatedCoordinates": {
+      "x": -1325,
+      "y": -445,
+      "z": 16915,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:33"
+  },
+  {
+    "id": 70073,
+    "id64": 136421079425034,
+    "name": "Eeshovvy OF-C c1-496",
+    "estimatedCoordinates": {
+      "x": -1325,
+      "y": -445,
+      "z": 16915,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:33"
+  },
+  {
+    "id": 70074,
+    "id64": 28943817809922,
+    "name": "Eeshovvy KZ-D c105",
+    "estimatedCoordinates": {
+      "x": -1325,
+      "y": -445,
+      "z": 16875,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:33"
+  },
+  {
+    "id": 70075,
+    "id64": 42581924679675,
+    "name": "Boepp OL-B d14-1239",
+    "date": "2015-08-15 22:13:34"
+  },
+  {
+    "id": 70076,
+    "id64": 23185510606844,
+    "name": "Boepp SP-O e6-5398",
+    "date": "2015-08-15 22:13:34"
+  },
+  {
+    "id": 70077,
+    "id64": 162534480617450,
+    "name": "Boepp UA-F c27-591",
+    "estimatedCoordinates": {
+      "x": -1325,
+      "y": -405,
+      "z": 16755,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:34"
+  },
+  {
+    "id": 70078,
+    "id64": 78696718999530,
+    "name": "Boepp UA-F c27-286",
+    "estimatedCoordinates": {
+      "x": -1325,
+      "y": -405,
+      "z": 16755,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:34"
+  },
+  {
+    "id": 70079,
+    "id64": 40829578039283,
+    "name": "Boepp IK-D d13-1188",
+    "date": "2015-08-15 22:13:34"
+  },
+  {
+    "id": 70080,
+    "id64": 9449329475505,
+    "name": "Boepp XH-R b50-4",
+    "estimatedCoordinates": {
+      "x": -1315,
+      "y": -395,
+      "z": 16665,
+      "precision": 17
+    },
+    "date": "2015-08-15 22:13:35"
+  },
+  {
+    "id": 70081,
+    "id64": 52133931962347,
+    "name": "Boepp EE-F d12-1517",
+    "date": "2015-08-15 22:13:35"
+  },
+  {
+    "id": 70082,
+    "id64": 357697794580426,
+    "name": "Boepp CH-M c23-1301",
+    "estimatedCoordinates": {
+      "x": -1325,
+      "y": -365,
+      "z": 16595,
+      "precision": 35
+    },
+    "date": "2015-08-15 22:13:35"
+  },
+  {
+    "id": 70084,
+    "id64": 89998363643875,
+    "name": "Boepp AY-G d11-2619",
+    "date": "2015-08-15 22:13:35"
+  },
+  {
+    "id": 70085,
+    "id64": 213074946478043,
+    "name": "Boepp WR-I d10-6201",
+    "date": "2015-08-15 22:13:36"
+  },
+  {
+    "id": 70091,
+    "id64": 580351181203234,
+    "name": "Stuemeae SY-S c3-2111",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 25995,
+      "precision": 35
+    },
+    "date": "2015-08-16 00:05:33"
+  },
+  {
+    "id": 70092,
+    "id64": 149067745208114,
+    "name": "Stuemeae AL-P c5-542",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 26075,
+      "precision": 35
+    },
+    "date": "2015-08-16 00:11:36"
+  },
+  {
+    "id": 70093,
+    "id64": 1637256733402930,
+    "name": "Stuemeae AL-P c5-5956",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 26075,
+      "precision": 35
+    },
+    "date": "2015-08-16 00:31:49"
+  },
+  {
+    "id": 70094,
+    "id64": 1240882791589690,
+    "name": "Stuemeae ER-N c6-4514",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 26115,
+      "precision": 35
+    },
+    "date": "2015-08-16 00:49:13"
+  },
+  {
+    "id": 70095,
+    "id64": 1062212152076098,
+    "name": "Stuemeae IX-L c7-3864",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 26155,
+      "precision": 35
+    },
+    "date": "2015-08-16 01:19:15"
+  },
+  {
+    "id": 70096,
+    "id64": 468750750984010,
+    "name": "Stuemeae MD-K c8-1705",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 26195,
+      "precision": 35
+    },
+    "date": "2015-08-16 01:51:25"
+  },
+  {
+    "id": 70097,
+    "id64": 1650450872936266,
+    "name": "Stuemeae MD-K c8-6004",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 26195,
+      "precision": 35
+    },
+    "date": "2015-08-16 01:53:38"
+  },
+  {
+    "id": 70098,
+    "id64": 387699315855025,
+    "name": "Stuemeae OF-N b20-176",
+    "estimatedCoordinates": {
+      "x": 25,
+      "y": -15,
+      "z": 26265,
+      "precision": 17
+    },
+    "date": "2015-08-16 02:36:58"
+  },
+  {
+    "id": 70099,
+    "id64": 310695954491218,
+    "name": "Stuemeae QJ-I c9-1130",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 26235,
+      "precision": 35
+    },
+    "date": "2015-08-16 02:36:58"
+  },
+  {
+    "id": 70100,
+    "id64": 35623769475548,
+    "name": "Stuemeae MS-U e2-8294",
+    "date": "2015-08-16 02:39:29"
+  },
+  {
+    "id": 70102,
+    "id64": 71827053324138,
+    "name": "Juenae SY-I c12-261",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -45,
+      "z": 26355,
+      "precision": 35
+    },
+    "date": "2015-08-16 03:16:55"
+  },
+  {
+    "id": 70103,
+    "id64": 183702361483114,
+    "name": "Stuemeae CC-D c12-668",
+    "estimatedCoordinates": {
+      "x": 35,
+      "y": -5,
+      "z": 26355,
+      "precision": 35
+    },
+    "date": "2015-08-16 03:16:55"
+  },
+  {
+    "id": 70104,
+    "id64": 622407433824114,
+    "name": "Juenae VE-H c13-2264",
+    "estimatedCoordinates": {
+      "x": -5,
+      "y": -45,
+      "z": 26395,
+      "precision": 35
+    },
+    "date": "2015-08-16 03:43:26"
+  },
+  {
+    "id": 70183,
+    "id64": 88898751681603,
+    "name": "Eos Chraei MT-O d7-2587",
+    "date": "2015-08-16 10:08:46"
+  },
+  {
+    "id": 70184,
+    "id64": 10526194116746,
+    "name": "Eos Chraei AY-B c16-38",
+    "estimatedCoordinates": {
+      "x": -1805,
+      "y": 1235,
+      "z": 27795,
+      "precision": 35
+    },
+    "date": "2015-08-16 10:08:46"
+  },
+  {
+    "id": 70185,
+    "id64": 115664987870275,
+    "name": "Eos Chraei MT-O d7-3366",
+    "date": "2015-08-16 10:08:46"
+  },
+  {
+    "id": 70186,
+    "id64": 86905886856267,
+    "name": "Eos Chraei QZ-M d8-2529",
+    "date": "2015-08-16 10:08:46"
+  },
+  {
+    "id": 70187,
+    "id64": 54506659227794,
+    "name": "Eos Chraei EE-A c17-198",
+    "estimatedCoordinates": {
+      "x": -1805,
+      "y": 1235,
+      "z": 27835,
+      "precision": 35
+    },
+    "date": "2015-08-16 10:08:46"
+  },
+  {
+    "id": 70188,
+    "id64": 21759822910539,
+    "name": "Eos Chraei QZ-M d8-633",
+    "date": "2015-08-16 10:08:47"
+  },
+  {
+    "id": 70190,
+    "id64": 98244600517707,
+    "name": "Eos Chraei QZ-M d8-2859",
+    "date": "2015-08-16 10:08:47"
+  },
+  {
+    "id": 70191,
+    "id64": 6952781326482,
+    "name": "Eos Chraei EE-A c17-25",
+    "estimatedCoordinates": {
+      "x": -1805,
+      "y": 1235,
+      "z": 27835,
+      "precision": 35
+    },
+    "date": "2015-08-16 10:08:47"
+  },
+  {
+    "id": 70192,
+    "id64": 20351073637451,
+    "name": "Eos Chraei QZ-M d8-592",
+    "date": "2015-08-16 10:08:48"
+  },
+  {
+    "id": 70193,
+    "id64": 9442623901985,
+    "name": "Eos Chraei II-A b34-4",
+    "estimatedCoordinates": {
+      "x": -1815,
+      "y": 1225,
+      "z": 27825,
+      "precision": 17
+    },
+    "date": "2015-08-16 10:08:48"
+  },
+  {
+    "id": 70194,
+    "id64": 7363092534347,
+    "name": "Eos Chraei QZ-M d8-214",
+    "date": "2015-08-16 10:08:48"
+  },
+  {
+    "id": 70195,
+    "id64": 7243600646433,
+    "name": "Eos Chraei II-A b34-3",
+    "estimatedCoordinates": {
+      "x": -1815,
+      "y": 1225,
+      "z": 27825,
+      "precision": 17
+    },
+    "date": "2015-08-16 10:08:48"
+  },
+  {
+    "id": 70196,
+    "id64": 3654246443154,
+    "name": "Eos Chraei EE-A c17-13",
+    "estimatedCoordinates": {
+      "x": -1805,
+      "y": 1235,
+      "z": 27835,
+      "precision": 35
+    },
+    "date": "2015-08-16 10:08:48"
+  },
+  {
+    "id": 70220,
+    "id64": 89419172292506,
+    "name": "Stuemeae ZM-S c17-325",
+    "estimatedCoordinates": {
+      "x": -5,
+      "y": -5,
+      "z": 26595,
+      "precision": 35
+    },
+    "date": "2015-08-16 12:57:18"
+  },
+  {
+    "id": 70221,
+    "id64": 290144108155851,
+    "name": "Stuemeae KD-K d8-8444",
+    "date": "2015-08-16 12:57:18"
+  },
+  {
+    "id": 70224,
+    "id64": 698273736173474,
+    "name": "Stuemeae DT-Q c18-2540",
+    "estimatedCoordinates": {
+      "x": -5,
+      "y": -5,
+      "z": 26635,
+      "precision": 35
+    },
+    "date": "2015-08-16 13:00:18"
+  },
+  {
+    "id": 70246,
+    "id64": 658338358545,
+    "name": "Wredguia OF-T b31-0",
+    "estimatedCoordinates": {
+      "x": -935,
+      "y": 105,
+      "z": -375,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:10:04"
+  },
+  {
+    "id": 70248,
+    "id64": 2240555240947,
+    "name": "Zejoo LE-E d13-65",
+    "date": "2015-08-16 15:11:47"
+  },
+  {
+    "id": 70249,
+    "id64": 3443146083827,
+    "name": "Zejoo LE-E d13-100",
+    "date": "2015-08-16 15:11:47"
+  },
+  {
+    "id": 70250,
+    "id64": 8578559581170,
+    "name": "Zejoo EV-E c28-31",
+    "estimatedCoordinates": {
+      "x": -15805,
+      "y": -85,
+      "z": 11675,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:47"
+  },
+  {
+    "id": 70251,
+    "id64": 2549792886267,
+    "name": "Zejoo PK-C d14-74",
+    "date": "2015-08-16 15:11:47"
+  },
+  {
+    "id": 70252,
+    "id64": 2806190644210,
+    "name": "Zejoo FV-E c28-10",
+    "estimatedCoordinates": {
+      "x": -15765,
+      "y": -85,
+      "z": 11675,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:47"
+  },
+  {
+    "id": 70253,
+    "id64": 3099548700155,
+    "name": "Zejoo PK-C d14-90",
+    "date": "2015-08-16 15:11:47"
+  },
+  {
+    "id": 70255,
+    "id64": 6329380867587,
+    "name": "Clookoae KR-C d184",
+    "date": "2015-08-16 15:11:48"
+  },
+  {
+    "id": 70256,
+    "id64": 144627961347,
+    "name": "Clookoae KR-C d4",
+    "date": "2015-08-16 15:11:48"
+  },
+  {
+    "id": 70257,
+    "id64": 6379670510602,
+    "name": "Clookoae WT-D c1-23",
+    "estimatedCoordinates": {
+      "x": -15725,
+      "y": -125,
+      "z": 11795,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:48"
+  },
+  {
+    "id": 70258,
+    "id64": 5829981838346,
+    "name": "Clookoae VY-D c1-21",
+    "estimatedCoordinates": {
+      "x": -15685,
+      "y": -85,
+      "z": 11795,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:48"
+  },
+  {
+    "id": 70259,
+    "id64": 12152173698058,
+    "name": "Clookoae VY-D c1-44",
+    "estimatedCoordinates": {
+      "x": -15685,
+      "y": -85,
+      "z": 11795,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:49"
+  },
+  {
+    "id": 70260,
+    "id64": 332423699466,
+    "name": "Clookoae VY-D c1-1",
+    "estimatedCoordinates": {
+      "x": -15685,
+      "y": -85,
+      "z": 11795,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:49"
+  },
+  {
+    "id": 70261,
+    "id64": 3202644692491,
+    "name": "Clookoae MC-B d1-93",
+    "date": "2015-08-16 15:11:49"
+  },
+  {
+    "id": 70262,
+    "id64": 9255788427305,
+    "name": "Clookoae CL-C b5-4",
+    "estimatedCoordinates": {
+      "x": -15735,
+      "y": -115,
+      "z": 11845,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:11:49"
+  },
+  {
+    "id": 70263,
+    "id64": 6929359215642,
+    "name": "Clookoae DG-A c3-25",
+    "estimatedCoordinates": {
+      "x": -15765,
+      "y": -125,
+      "z": 11875,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:49"
+  },
+  {
+    "id": 70264,
+    "id64": 5280091773978,
+    "name": "Clookoae DG-A c3-19",
+    "estimatedCoordinates": {
+      "x": -15765,
+      "y": -125,
+      "z": 11875,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:49"
+  },
+  {
+    "id": 70265,
+    "id64": 2657913354305,
+    "name": "Clookoae LD-X b7-1",
+    "estimatedCoordinates": {
+      "x": -15795,
+      "y": -115,
+      "z": 11905,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:11:50"
+  },
+  {
+    "id": 70266,
+    "id64": 3081001409570,
+    "name": "Clookoae GM-Y c3-11",
+    "estimatedCoordinates": {
+      "x": -15805,
+      "y": -125,
+      "z": 11915,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:50"
+  },
+  {
+    "id": 70267,
+    "id64": 18050270836817,
+    "name": "Clookoae QP-T b9-8",
+    "estimatedCoordinates": {
+      "x": -15855,
+      "y": -115,
+      "z": 11945,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:11:50"
+  },
+  {
+    "id": 70268,
+    "id64": 1828221586963,
+    "name": "Clookoae QD-Z d1-53",
+    "date": "2015-08-16 15:11:50"
+  },
+  {
+    "id": 70269,
+    "id64": 606966029362,
+    "name": "Clookoae MY-U c5-2",
+    "estimatedCoordinates": {
+      "x": -15885,
+      "y": -125,
+      "z": 11995,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:50"
+  },
+  {
+    "id": 70270,
+    "id64": 457279420521,
+    "name": "Clookoae BD-O b12-0",
+    "estimatedCoordinates": {
+      "x": -15915,
+      "y": -135,
+      "z": 12005,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:11:51"
+  },
+  {
+    "id": 70272,
+    "id64": 694333443611,
+    "name": "Clookoae TJ-X d2-20",
+    "date": "2015-08-16 15:11:51"
+  },
+  {
+    "id": 70273,
+    "id64": 3099515129371,
+    "name": "Clookoae TJ-X d2-90",
+    "date": "2015-08-16 15:11:51"
+  },
+  {
+    "id": 70274,
+    "id64": 694316666403,
+    "name": "Clookoae WP-V d3-20",
+    "date": "2015-08-16 15:11:51"
+  },
+  {
+    "id": 70275,
+    "id64": 456205678729,
+    "name": "Clookoae NB-H b16-0",
+    "estimatedCoordinates": {
+      "x": -15995,
+      "y": -135,
+      "z": 12085,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:11:51"
+  },
+  {
+    "id": 70276,
+    "id64": 9252030331009,
+    "name": "Clookoae GA-J b15-4",
+    "estimatedCoordinates": {
+      "x": -16015,
+      "y": -115,
+      "z": 12065,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:11:52"
+  },
+  {
+    "id": 70278,
+    "id64": 13650076907657,
+    "name": "Clookoae IL-H b16-6",
+    "estimatedCoordinates": {
+      "x": -16015,
+      "y": -95,
+      "z": 12085,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:11:52"
+  },
+  {
+    "id": 70279,
+    "id64": 8303346129994,
+    "name": "Clookoae TV-P c8-30",
+    "estimatedCoordinates": {
+      "x": -16005,
+      "y": -85,
+      "z": 12115,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:52"
+  },
+  {
+    "id": 70280,
+    "id64": 7753590316114,
+    "name": "Clookoae XB-O c9-28",
+    "estimatedCoordinates": {
+      "x": -16005,
+      "y": -85,
+      "z": 12155,
+      "precision": 35
+    },
+    "date": "2015-08-16 15:11:52"
+  },
+  {
+    "id": 70281,
+    "id64": 2927716453931,
+    "name": "Clookoae ZA-U d4-85",
+    "date": "2015-08-16 15:11:52"
+  },
+  {
+    "id": 70282,
+    "id64": 9252835768489,
+    "name": "Clookoae ZO-A b20-4",
+    "estimatedCoordinates": {
+      "x": -15955,
+      "y": -75,
+      "z": 12165,
+      "precision": 17
+    },
+    "date": "2015-08-16 15:11:52"
+  },
+  {
+    "id": 70283,
+    "id64": 2687198285355,
+    "name": "Clookoae ZA-U d4-78",
+    "date": "2015-08-16 15:11:53"
+  }
+]
