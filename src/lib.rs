@@ -244,8 +244,6 @@ pub struct Faction {
     #[serde(rename = "happienessHistory")]
     pub happieness_history: Option<HashMap<u64, String>>,
 
-    // TODO: State historys can either be { ... } or [] when empty.
-
     pub state: String,
     #[serde(rename = "stateHistory")]
     pub state_history: Option<StateHistory>,
