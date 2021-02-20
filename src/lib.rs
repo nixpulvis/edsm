@@ -55,11 +55,10 @@ pub struct System {
 
     // TODO
     // pub stations: Option<Vec<Station>>,
-    // #[serde(rename = "controllingFaction")]
 
-    // TODO
-    // pub factions: Option<Vec<Faction>>,
-    // pub controlling_faction: Option<Faction>,
+    pub factions: Option<Vec<Faction>>,
+    #[serde(rename = "controllingFaction")]
+    pub controlling_faction: Option<ControllingFaction>,
 
     pub deaths: Option<Statistic>,
 
@@ -230,6 +229,105 @@ pub struct Belt {
     pub outer_radius: f64,
 }
 
+#[derive(Deserialize, Debug)]
+pub struct Faction {
+    pub id: u64,
+    pub name: String,
+    pub allegiance: String,
+    pub government: String,
+
+    pub influence: f64,
+    #[serde(rename = "influenceHistory")]
+    pub influence_history: Option<HashMap<u64, f64>>,
+
+    pub happieness: Option<String>,
+    #[serde(rename = "happienessHistory")]
+    pub happieness_history: Option<HashMap<u64, String>>,
+
+    // TODO: State historys can either be { ... } or [] when empty.
+
+    pub state: String,
+    #[serde(rename = "stateHistory")]
+    pub state_history: Option<StateHistory>,
+
+    #[serde(rename = "activeStates")]
+    pub active_states: Vec<State>,
+    #[serde(rename = "activeStatesHistory")]
+    pub active_states_history: Option<ActiveStatesHistory>,
+
+    #[serde(rename = "recoveringStates")]
+    pub recovering_states: Vec<TrendingState>,
+    #[serde(rename = "recoveringStatesHistory")]
+    pub recovering_states_history: Option<TrendingStatesHistory>,
+
+    #[serde(rename = "pendingStates")]
+    pub pending_states: Vec<TrendingState>,
+    #[serde(rename = "pendingStatesHistory")]
+    pub pending_states_history: Option<TrendingStatesHistory>,
+
+
+    #[serde(rename = "isPlayer")]
+    pub is_player: bool,
+    #[serde(rename = "lastUpdated")]
+    pub last_updated: Option<u64>,
+}
+
+#[derive(Deserialize, Debug)]
+pub struct ControllingFaction {
+    pub id: u64,
+    pub name: String,
+    pub allegiance: String,
+    pub government: String,
+}
+
+#[derive(Deserialize, Debug)]
+#[serde(untagged)]
+pub enum StateHistory {
+    List(Vec<()>),
+    // NOTE: The keys here are really Unix Timestamps.
+    Map(HashMap<String, String>),
+}
+
+#[test]
+fn test_state_history() {
+    let empty_array = r#"
+        []
+    "#;
+    let state_history: StateHistory = serde_json::from_str(empty_array).unwrap();
+    let object = r#"
+        { "123": "foo" }
+    "#;
+    let state_history: StateHistory = serde_json::from_str(object).unwrap();
+}
+
+#[derive(Deserialize, Debug)]
+#[serde(untagged)]
+pub enum ActiveStatesHistory {
+    List(Vec<()>),
+    // NOTE: The keys here are really Unix Timestamps.
+    Map(HashMap<String, Vec<State>>),
+}
+
+#[derive(Deserialize, Debug)]
+#[serde(untagged)]
+pub enum TrendingStatesHistory {
+    List(Vec<()>),
+    // NOTE: The keys here are really Unix Timestamps.
+    Map(HashMap<String, Vec<TrendingState>>),
+}
+
+#[derive(Deserialize, Debug)]
+pub struct State {
+    pub state: String,
+}
+
+#[derive(Deserialize, Debug)]
+pub struct TrendingState {
+    #[serde(flatten)]
+    pub state: State,
+    pub trend: u64,
+}
+
 pub fn json(file_path: &str) -> Vec<System> {
     let file = File::open(file_path).unwrap();
     serde_json::from_reader(file).unwrap()
@@ -367,10 +465,11 @@ pub fn bodies(system_name: &str) -> Result<System> {
     reqwest::blocking::get(url)?.json::<System>()
 }
 
-pub fn factions(system_name: &str) -> Result<System> {
+pub fn factions(system_name: &str, history: bool) -> Result<System> {
     let url = Url::parse_with_params(
         &format!("{}/factions", SYSTEM_URL),
-        &[("systemName", system_name)]).unwrap();
+        &[("systemName", system_name),
+          ("showHistory", &(history as u8).to_string())]).unwrap();
     reqwest::blocking::get(url)?.json::<System>()
 }
 

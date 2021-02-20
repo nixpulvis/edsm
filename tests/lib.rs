@@ -116,14 +116,16 @@ fn test_bodies() {
 
 #[test]
 fn test_factions() {
-    let system = bodies("Sol").expect("EDSM API");
-    assert_eq!("Sol", system.name);
-    assert_eq!(Some(27), system.id);
-    assert!(system.coords.is_none());
-    assert!(system.require_permit.is_none());
-    let bodies = system.bodies.expect("EDSM API (bodies)");
-    assert_eq!(system.body_count.unwrap(), bodies.len() as u64);
-    // TODO more
+    let system = factions("Meliae", false).expect("EDSM API");
+    assert_eq!("Meliae", system.name);
+    assert_eq!(Some(1062), system.id);
+    let controlling_faction = system.controlling_faction.unwrap();
+    assert_eq!(81861, controlling_faction.id);
+    assert_eq!("New Pilots Initiative", controlling_faction.name);
+    assert_eq!("Independent", controlling_faction.allegiance);
+    assert_eq!("Corporate", controlling_faction.government);
+    let total_inf: f64 = system.factions.unwrap().iter().map(|f| f.influence).sum();
+    assert_eq!(1., total_inf);
 }
 
 #[test]
