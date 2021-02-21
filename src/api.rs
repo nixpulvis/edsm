@@ -1,10 +1,49 @@
-use reqwest::{Result, Url};
+use std::fmt;
+use std::error;
+use reqwest::{Url, StatusCode};
+use serde::Deserialize;
 use crate::System;
 
 /// Base URL for the [System (also called Body) API](https://www.edsm.net/api-system-v1)
 pub const SYSTEM_URL: &'static str = "https://www.edsm.net/api-system-v1";
 /// Base URL for the [Systems API](https://www.edsm.net/api-v1)
 pub const SYSTEMS_URL: &'static str = "https://www.edsm.net/api-v1";
+
+pub type Result<T> = std::result::Result<T, Error>;
+
+#[derive(Debug)]
+pub enum Error {
+    Edsm(StatusCode),
+    Request(reqwest::Error),
+}
+
+impl fmt::Display for Error {
+    fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
+        match self {
+            Error::Edsm(s) =>
+                write!(f, "{}", s.canonical_reason().unwrap_or("???")),
+            // The wrapped error contains additional information and is available
+            // via the source() method.
+            Error::Request(e) =>
+                write!(f, "{}", e),
+        }
+    }
+}
+
+impl error::Error for Error {
+    fn source(&self) -> Option<&(dyn error::Error + 'static)> {
+        match *self {
+            Error::Edsm(_) => None,
+            Error::Request(ref e) => Some(e),
+        }
+    }
+}
+
+impl From<reqwest::Error> for Error {
+    fn from(err: reqwest::Error) -> Error {
+        Error::Request(err)
+    }
+}
 
 /// Request many [Systems][System] by name
 ///
@@ -36,7 +75,7 @@ pub fn systems(query: &str) -> Result<Vec<System>> {
 
     let path = format!("{}/systems", SYSTEMS_URL);
     let url = Url::parse_with_params(&path, &params).unwrap();
-    reqwest::blocking::get(url)?.json::<Vec<System>>()
+    get(url)
 }
 
 // TODO: enum for allowing coords as well as systemName.
@@ -69,7 +108,7 @@ pub fn systems_sphere(name: &str, radius: Option<f64>, min_radius: Option<f64>)
 
     let path = format!("{}/sphere-systems", SYSTEMS_URL);
     let url = Url::parse_with_params(&path, &params).unwrap();
-    reqwest::blocking::get(url)?.json::<Vec<System>>()
+    get(url)
 }
 
 // TODO: enum for allowing coords as well as systemName.
@@ -96,7 +135,7 @@ pub fn systems_cube(name: &str, size: Option<f64>) -> Result<Vec<System>> {
 
     let path = format!("{}/cube-systems", SYSTEMS_URL);
     let url = Url::parse_with_params(&path, &params).unwrap();
-    reqwest::blocking::get(url)?.json::<Vec<System>>()
+    get(url)
 }
 
 // TODO: unify both sphere and cube functions.
@@ -124,7 +163,7 @@ pub fn system(name: &str) -> Result<System> {
 
     let path = format!("{}/system", SYSTEMS_URL);
     let url = Url::parse_with_params(&path, &params).unwrap();
-    reqwest::blocking::get(url)?.json::<System>()
+    get(url)
     // TODO: add option to call bodies and merge, then remove `bodies` function.
 }
 
@@ -135,7 +174,7 @@ pub fn traffic(system_name: &str) -> Result<System> {
     let url = Url::parse_with_params(
         &format!("{}/traffic", SYSTEM_URL),
         &[("systemName", system_name)]).unwrap();
-    reqwest::blocking::get(url)?.json::<System>()
+    get(url)
 }
 
 /// Request a single [System]'s death report
@@ -143,7 +182,7 @@ pub fn deaths(system_name: &str) -> Result<System> {
     let url = Url::parse_with_params(
         &format!("{}/deaths", SYSTEM_URL),
         &[("systemName", system_name)]).unwrap();
-    reqwest::blocking::get(url)?.json::<System>()
+    get(url)
 }
 
 /// Request a single [System] populated with many [Bodies][crate::Body]
@@ -151,7 +190,7 @@ pub fn bodies(system_name: &str) -> Result<System> {
     let url = Url::parse_with_params(
         &format!("{}/bodies", SYSTEM_URL),
         &[("systemName", system_name)]).unwrap();
-    reqwest::blocking::get(url)?.json::<System>()
+    get(url)
 }
 
 /// Fetch a system with it's factions
@@ -163,5 +202,16 @@ pub fn factions(system_name: &str, history: bool) -> Result<System> {
         &format!("{}/factions", SYSTEM_URL),
         &[("systemName", system_name),
           ("showHistory", &(history as u8).to_string())]).unwrap();
-    reqwest::blocking::get(url)?.json::<System>()
+    get(url)
+}
+
+// Get a JSON resource from the given URL
+fn get<D: for<'de> Deserialize<'de>>(url: Url) -> Result<D> {
+    let response = reqwest::blocking::get(url)?;
+    let status = response.status();
+    if status.is_success() {
+        response.json::<D>().map_err(|e| e.into())
+    } else {
+        Err(Error::Edsm(status))
+    }
 }
