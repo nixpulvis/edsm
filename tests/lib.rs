@@ -1,7 +1,5 @@
 use edsm::json;
 
-mod api;
-
 #[test]
 fn test_json() {
     let systems = json("tests/systemsWithoutCoordinates.json");

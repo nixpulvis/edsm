@@ -126,7 +126,7 @@ fn test_traffic() {
     let traffic = system.traffic.expect("requested traffic");
     assert!(traffic.total < 500000);
     assert!(traffic.week < 1000);
-    assert!(traffic.day < 100);
+    assert!(traffic.day < 200);
     // TODO breakdown
 }
 
