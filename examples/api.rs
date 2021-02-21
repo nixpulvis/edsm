@@ -1,4 +1,4 @@
-use edsm::*;
+use edsm::api::*;
 
 fn main() {
     dbg!(&system("Sol").unwrap());
