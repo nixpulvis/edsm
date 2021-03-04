@@ -82,20 +82,6 @@ pub enum StateHistory {
     Map(HashMap<String, String>),
 }
 
-#[test]
-fn test_state_history() {
-    let empty_array = r#"
-        []
-    "#;
-    let state_history: StateHistory = serde_json::from_str(empty_array).unwrap();
-    assert!(matches!(state_history, StateHistory::Empty(_)));
-    let object = r#"
-        { "123": "foo" }
-    "#;
-    let state_history: StateHistory = serde_json::from_str(object).unwrap();
-    assert!(matches!(state_history, StateHistory::Map(_)));
-}
-
 /// The history of a faction's active states
 // TODO: Unify with `StateHistory`.
 #[derive(Deserialize, Debug)]
@@ -114,4 +100,24 @@ pub enum TrendingStatesHistory {
     Empty([(); 0]),
     // NOTE: The keys here are really Unix Timestamps.
     Map(HashMap<String, Vec<TrendingState>>),
+}
+
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn state_history() {
+        let empty_array = r#"
+            []
+        "#;
+        let state_history: StateHistory = serde_json::from_str(empty_array).unwrap();
+        assert!(matches!(state_history, StateHistory::Empty(_)));
+        let object = r#"
+            { "123": "foo" }
+        "#;
+        let state_history: StateHistory = serde_json::from_str(object).unwrap();
+        assert!(matches!(state_history, StateHistory::Map(_)));
+    }
 }
