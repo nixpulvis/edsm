@@ -112,11 +112,11 @@ fn test_factions() {
     assert_eq!(Some(1062), system.id);
     let controlling_faction = system.controlling_faction.unwrap();
     assert_eq!(81861, controlling_faction.id);
-    assert_eq!("New Pilots Initiative", controlling_faction.name);
-    assert_eq!("Independent", controlling_faction.allegiance);
-    assert_eq!("Corporate", controlling_faction.government);
+    assert_eq!("New Pilots Initiative", controlling_faction.name.unwrap());
+    assert_eq!("Independent", controlling_faction.allegiance.unwrap());
+    assert_eq!("Corporate", controlling_faction.government.unwrap());
     let total_inf: f64 = system.factions.unwrap().iter().map(|f| f.influence).sum();
-    assert_eq!(1., total_inf);
+    assert_eq!(1., (total_inf * 1000.).round() / 1000.);
 }
 
 #[test]
