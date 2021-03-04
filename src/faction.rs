@@ -9,8 +9,8 @@ use serde::Deserialize;
 pub struct Faction {
     pub id: u64,
     pub name: String,
-    pub allegiance: String,
-    pub government: String,
+    pub allegiance: Option<String>,
+    pub government: Option<String>,
 
     pub influence: f64,
     #[serde(rename = "influenceHistory")]
@@ -21,7 +21,7 @@ pub struct Faction {
     pub happieness_history: Option<HashMap<u64, String>>,
 
     #[serde(rename = "state")]
-    pub primary_state: String,
+    pub primary_state: Option<String>,
     #[serde(rename = "stateHistory")]
     pub primary_state_history: Option<StateHistory>,
 
@@ -51,9 +51,9 @@ pub struct Faction {
 #[derive(Deserialize, Debug)]
 pub struct ControllingFaction {
     pub id: u64,
-    pub name: String,
-    pub allegiance: String,
-    pub government: String,
+    pub name: Option<String>,
+    pub allegiance: Option<String>,
+    pub government: Option<String>,
 }
 
 /// A condition which a faction can be experiencing
