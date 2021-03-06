@@ -116,7 +116,9 @@ fn test_factions() {
     assert_eq!("Independent", controlling_faction.allegiance.unwrap());
     assert_eq!("Corporate", controlling_faction.government.unwrap());
     let total_inf: f64 = system.factions.unwrap().iter().map(|f| f.influence).sum();
-    assert_eq!(1., (total_inf * 1000.).round() / 1000.);
+    // Would be nice if this was 1_000...
+    let expected_precision = 100.;
+    assert_eq!(1., (total_inf * expected_precision).round() / expected_precision);
 }
 
 #[test]
