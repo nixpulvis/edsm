@@ -126,9 +126,9 @@ fn test_traffic() {
     let system = traffic("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Sol", system.name);
     let traffic = system.traffic.expect("requested traffic");
-    assert!(traffic.total < 500000);
-    assert!(traffic.week < 1000);
-    assert!(traffic.day < 200);
+    assert!(traffic.total > 0);
+    assert!(traffic.week > 0);
+    assert!(traffic.day > 0);
     // TODO breakdown
 }
 
@@ -137,8 +137,8 @@ fn test_deaths() {
     let system = deaths("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Sol", system.name);
     let deaths = system.deaths.expect("requested deaths");
-    assert!(deaths.total < 5000);
-    assert!(deaths.week < 100);
-    assert!(deaths.day < 10);
+    assert!(deaths.total > 0);
+    assert!(deaths.week > 0);
+    assert!(deaths.day >= 0);
     // TODO breakdown
 }
