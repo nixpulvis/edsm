@@ -27,6 +27,8 @@ pub use self::body::{Belt, Body, Orbit};
 /// The EDSM web API
 #[cfg(unix)]
 pub mod api;
+// #[cfg(not(unix))]
+// pub mod api_web;
 
 // TODO
 // Require a market ID, someone some stations have.
