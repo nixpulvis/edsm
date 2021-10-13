@@ -25,6 +25,7 @@ pub mod body;
 pub use self::body::{Belt, Body, Orbit};
 
 /// The EDSM web API
+#[cfg(unix)]
 pub mod api;
 
 // TODO
