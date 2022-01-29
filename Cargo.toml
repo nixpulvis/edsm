@@ -1,6 +1,6 @@
 [package]
 name = "edsm"
-version = "0.0.1-dev+alpha"
+version = "0.0.2"
 authors = ["Nathan Lilienthal <nathan@nixpulvis.com>"]
 edition = "2018"
 
