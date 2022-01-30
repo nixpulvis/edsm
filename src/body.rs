@@ -28,7 +28,7 @@ pub struct Body {
     pub belts: Option<Vec<Belt>>,
     #[serde(deserialize_with = "serde_utils::space_seperated_datetime")]
     #[serde(rename = "updateTime")]
-    updated_at: NaiveDateTime,
+    pub updated_at: NaiveDateTime,
 }
 
 /// Orbital information about a [Body]
