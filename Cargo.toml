@@ -5,6 +5,7 @@ authors = ["Nathan Lilienthal <nathan@nixpulvis.com>"]
 edition = "2018"
 
 [dependencies]
+elite_journal = { path = "../elite_journal" }
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"
 chrono = { version = "*", features = ["serde"] }
@@ -12,6 +13,3 @@ chrono = { version = "*", features = ["serde"] }
 [target.'cfg(unix)'.dependencies.reqwest]
 version = "*"
 features = ["blocking", "json"]
-
-[dependencies.elite_journal]
-git = "https://github.com/nixpulvis/elite_journal"
