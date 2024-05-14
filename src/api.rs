@@ -1,8 +1,8 @@
-use std::fmt;
-use std::error;
-use reqwest::{Url, StatusCode};
-use serde::Deserialize;
 use crate::System;
+use reqwest::{StatusCode, Url};
+use serde::Deserialize;
+use std::error;
+use std::fmt;
 
 /// Base URL for the [System (also called Body) API](https://www.edsm.net/api-system-v1)
 pub const SYSTEM_URL: &'static str = "https://www.edsm.net/api-system-v1";
@@ -20,12 +20,10 @@ pub enum Error {
 impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            Error::Edsm(s) =>
-                write!(f, "{}", s.canonical_reason().unwrap_or("???")),
+            Error::Edsm(s) => write!(f, "{}", s.canonical_reason().unwrap_or("???")),
             // The wrapped error contains additional information and is available
             // via the source() method.
-            Error::Request(e) =>
-                write!(f, "{}", e),
+            Error::Request(e) => write!(f, "{}", e),
         }
     }
 }
@@ -79,14 +77,18 @@ pub fn systems(query: &str) -> Result<Vec<System>> {
 }
 
 // TODO: enum for allowing coords as well as systemName.
-pub fn systems_sphere(name: &str, radius: Option<f64>, min_radius: Option<f64>)
-    -> Result<Vec<System>>
-{
+pub fn systems_sphere(
+    name: &str,
+    radius: Option<f64>,
+    min_radius: Option<f64>,
+) -> Result<Vec<System>> {
     let mut params = vec![("systemName", name.to_string())];
 
     if let Some(r) = radius {
         // TODO: Better error handling.
-        if r > 100. { panic!("radius too large") }
+        if r > 100. {
+            panic!("radius too large")
+        }
         params.push(("radius", r.to_string()));
     }
     if let Some(m) = min_radius {
@@ -173,7 +175,9 @@ pub fn system(name: &str) -> Result<System> {
 pub fn traffic(system_name: &str) -> Result<System> {
     let url = Url::parse_with_params(
         &format!("{}/traffic", SYSTEM_URL),
-        &[("systemName", system_name)]).unwrap();
+        &[("systemName", system_name)],
+    )
+    .unwrap();
     get(url)
 }
 
@@ -181,7 +185,9 @@ pub fn traffic(system_name: &str) -> Result<System> {
 pub fn deaths(system_name: &str) -> Result<System> {
     let url = Url::parse_with_params(
         &format!("{}/deaths", SYSTEM_URL),
-        &[("systemName", system_name)]).unwrap();
+        &[("systemName", system_name)],
+    )
+    .unwrap();
     get(url)
 }
 
@@ -189,7 +195,9 @@ pub fn deaths(system_name: &str) -> Result<System> {
 pub fn bodies(system_name: &str) -> Result<System> {
     let url = Url::parse_with_params(
         &format!("{}/bodies", SYSTEM_URL),
-        &[("systemName", system_name)]).unwrap();
+        &[("systemName", system_name)],
+    )
+    .unwrap();
     get(url)
 }
 
@@ -200,8 +208,12 @@ pub fn bodies(system_name: &str) -> Result<System> {
 pub fn factions(system_name: &str, history: bool) -> Result<System> {
     let url = Url::parse_with_params(
         &format!("{}/factions", SYSTEM_URL),
-        &[("systemName", system_name),
-          ("showHistory", &(history as u8).to_string())]).unwrap();
+        &[
+            ("systemName", system_name),
+            ("showHistory", &(history as u8).to_string()),
+        ],
+    )
+    .unwrap();
     get(url)
 }
 

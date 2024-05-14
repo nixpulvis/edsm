@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 // use chrono::naive::NaiveDateTime;
-use serde::Deserialize;
-use elite_journal::prelude::{Security, Government, Allegiance, Economy};
 use crate::{Body, ControllingFaction, Faction, State};
+use elite_journal::prelude::{Allegiance, Economy, Government, Security};
+use serde::Deserialize;
 // use crate::serde_utils;
 
 /// A position in 3 dimensional euclidean space
@@ -50,7 +50,6 @@ pub struct System {
 
     // TODO
     // pub stations: Option<Vec<Station>>,
-
     pub factions: Option<Vec<Faction>>,
     #[serde(rename = "controllingFaction")]
     pub controlling_faction: Option<ControllingFaction>,

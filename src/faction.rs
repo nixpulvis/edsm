@@ -1,6 +1,6 @@
-use std::collections::HashMap;
-use elite_journal::prelude::{State as JournalState, Happiness, Allegiance, Government};
+use elite_journal::prelude::{Allegiance, Government, Happiness, State as JournalState};
 use serde::Deserialize;
+use std::collections::HashMap;
 
 /// A group which inhabits one or more systems
 ///
@@ -40,7 +40,6 @@ pub struct Faction {
     pub pending_states: Vec<TrendingState>,
     #[serde(rename = "pendingStatesHistory")]
     pub pending_states_history: Option<TrendingStatesHistory>,
-
 
     #[serde(rename = "isPlayer")]
     pub is_player: bool,
@@ -102,7 +101,6 @@ pub enum TrendingStatesHistory {
     // NOTE: The keys here are really Unix Timestamps.
     Map(HashMap<String, Vec<TrendingState>>),
 }
-
 
 #[cfg(test)]
 mod tests {

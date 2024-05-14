@@ -1,7 +1,7 @@
 #![cfg(unix)]
-use elite_journal::{Allegiance, Government};
-use edsm::Coordinate;
 use edsm::api::*;
+use edsm::Coordinate;
+use elite_journal::{Allegiance, Government};
 
 #[test]
 fn test_systems() {
@@ -24,7 +24,8 @@ mod sphere {
 
     #[test]
     fn test_systems_sphere_max() {
-        let systems = systems_sphere("EV Cancri", Some(100.), None).unwrap_or_else(|e| panic!("{}", e));
+        let systems =
+            systems_sphere("EV Cancri", Some(100.), None).unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(140, systems.len());
     }
 
@@ -42,7 +43,8 @@ mod sphere {
 
     #[test]
     fn test_systems_sphere_min_radius() {
-        let systems = systems_sphere("Sol", Some(17.3), Some(10.)).unwrap_or_else(|e| panic!("{}", e));
+        let systems =
+            systems_sphere("Sol", Some(17.3), Some(10.)).unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(66, systems.len());
     }
 
@@ -50,7 +52,8 @@ mod sphere {
     #[test]
     #[ignore]
     fn test_systems_sphere_min_greater_than_max() {
-        let systems = systems_sphere("Alpha Centauri", Some(5.), Some(10.)).unwrap_or_else(|e| panic!("{}", e));
+        let systems = systems_sphere("Alpha Centauri", Some(5.), Some(10.))
+            .unwrap_or_else(|e| panic!("{}", e));
         dbg!(&systems);
         assert_eq!(0, systems.len());
     }
@@ -91,7 +94,14 @@ fn test_system() {
     let system = system("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Sol", system.name);
     assert_eq!(Some(27), system.id);
-    assert_eq!(Some(Coordinate { x: 0.0, y: 0.0, z: 0.0 }), system.coords);
+    assert_eq!(
+        Some(Coordinate {
+            x: 0.0,
+            y: 0.0,
+            z: 0.0
+        }),
+        system.coords
+    );
     assert_eq!(Some(true), system.require_permit);
 }
 
@@ -115,12 +125,21 @@ fn test_factions() {
     let controlling_faction = system.controlling_faction.unwrap();
     assert_eq!(81861, controlling_faction.id);
     assert_eq!("New Pilots Initiative", controlling_faction.name.unwrap());
-    assert_eq!(Allegiance::Independent, controlling_faction.allegiance.unwrap());
-    assert_eq!(Government::Corporate, controlling_faction.government.unwrap());
+    assert_eq!(
+        Allegiance::Independent,
+        controlling_faction.allegiance.unwrap()
+    );
+    assert_eq!(
+        Government::Corporate,
+        controlling_faction.government.unwrap()
+    );
     let total_inf: f64 = system.factions.unwrap().iter().map(|f| f.influence).sum();
     // Would be nice if this was 1_000...
     let expected_precision = 100.;
-    assert_eq!(1., (total_inf * expected_precision).round() / expected_precision);
+    assert_eq!(
+        1.,
+        (total_inf * expected_precision).round() / expected_precision
+    );
 }
 
 #[test]

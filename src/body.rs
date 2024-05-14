@@ -1,7 +1,7 @@
-use std::collections::HashMap;
+use crate::serde_utils;
 use chrono::naive::NaiveDateTime;
 use serde::Deserialize;
-use crate::serde_utils;
+use std::collections::HashMap;
 
 /// EDSM's representation of a celestial body
 #[derive(Deserialize, Debug)]
@@ -35,7 +35,7 @@ pub struct Body {
 #[derive(Deserialize, Debug)]
 pub struct Orbit {
     #[serde(rename = "orbitalPeriod")]
-    pub orbital_period:  Option<f64>,
+    pub orbital_period: Option<f64>,
     #[serde(rename = "semiMajorAxis")]
     pub semi_major_axis: Option<f64>,
     #[serde(rename = "orbitalEccentricity")]
@@ -91,7 +91,7 @@ pub enum Details {
         solid_composition: Option<HashMap<String, f64>>,
         #[serde(rename = "terraformingState")]
         terraforming_state: Option<String>,
-    }
+    },
 }
 
 /// A reference to another [Body] within the [System][crate::System] which is of gravitational

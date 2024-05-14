@@ -1,9 +1,9 @@
+use chrono::NaiveDateTime;
+use serde::de::{self, MapAccess, Visitor};
+use serde::{Deserialize, Deserializer};
 use std::fmt;
 use std::marker::PhantomData;
 use std::str::FromStr;
-use serde::de::{self, Visitor, MapAccess};
-use serde::{Deserialize, Deserializer};
-use chrono::NaiveDateTime;
 
 #[allow(unused)]
 pub fn string_or_struct<'de, T, D>(deserializer: D) -> std::result::Result<T, D::Error>
