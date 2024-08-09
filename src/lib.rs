@@ -17,7 +17,7 @@ use self::faction::*;
 
 /// A star system in space, containing the bodies, factions, stations, etc
 pub mod system;
-pub use self::system::{Coordinate, System};
+pub use self::system::System;
 
 /// The bodies of a system, including it's stars, planets, moons, rings, etc
 pub mod body;

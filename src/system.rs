@@ -1,17 +1,9 @@
 use std::collections::HashMap;
 // use chrono::naive::NaiveDateTime;
-use crate::{Body, ControllingFaction, Faction, State};
-use elite_journal::prelude::{Allegiance, Economy, Government, Security};
 use serde::Deserialize;
+use elite_journal::prelude::{Security, Government, Allegiance, Economy, Coordinate};
+use crate::{Body, ControllingFaction, Faction, State};
 // use crate::serde_utils;
-
-/// A position in 3 dimensional euclidean space
-#[derive(Deserialize, Debug, PartialEq)]
-pub struct Coordinate {
-    pub x: f64,
-    pub y: f64,
-    pub z: f64,
-}
 
 /// EDSM's representation of a solar system
 #[derive(Deserialize, Debug)]
