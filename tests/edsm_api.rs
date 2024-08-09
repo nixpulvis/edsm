@@ -31,13 +31,13 @@ mod sphere {
     #[test]
     fn test_systems_sphere_float_high() {
         let systems = systems_sphere("Sol", Some(17.8), None).unwrap_or_else(|e| panic!("{}", e));
-        assert_eq!(82, systems.len());
+        assert_eq!(83, systems.len());
     }
 
     #[test]
     fn test_systems_sphere_float_low() {
         let systems = systems_sphere("Sol", Some(17.3), None).unwrap_or_else(|e| panic!("{}", e));
-        assert_eq!(78, systems.len());
+        assert_eq!(79, systems.len());
     }
 
     #[test]
@@ -78,13 +78,13 @@ mod cube {
     #[test]
     fn test_systems_cube_float_high() {
         let systems = systems_cube("Sol", Some(24.)).unwrap_or_else(|e| panic!("{}", e));
-        assert_eq!(44, systems.len());
+        assert_eq!(45, systems.len());
     }
 
     #[test]
     fn test_systems_cube_float_low() {
         let systems = systems_cube("Sol", Some(23.9)).unwrap_or_else(|e| panic!("{}", e));
-        assert_eq!(40, systems.len());
+        assert_eq!(41, systems.len());
     }
 }
 
