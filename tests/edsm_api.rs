@@ -159,6 +159,5 @@ fn test_deaths() {
     let deaths = system.deaths.expect("requested deaths");
     assert!(deaths.total > 0);
     assert!(deaths.week > 0);
-    assert!(deaths.day >= 0);
     // TODO breakdown
 }
