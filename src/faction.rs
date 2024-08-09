@@ -69,7 +69,7 @@ pub struct State {
 pub struct TrendingState {
     #[serde(flatten)]
     pub state: State,
-    pub trend: u64,
+    pub trend: Option<u64>,
 }
 
 /// The history of a faction's states
