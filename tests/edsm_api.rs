@@ -1,6 +1,6 @@
 #![cfg(unix)]
-use elite_journal::{Allegiance, Government, system::Coordinate};
 use edsm::api::*;
+use elite_journal::{system::Coordinate, Allegiance, Government};
 
 #[test]
 fn test_systems() {

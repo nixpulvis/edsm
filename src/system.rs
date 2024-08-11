@@ -1,8 +1,8 @@
 use std::collections::HashMap;
 // use chrono::naive::NaiveDateTime;
-use serde::Deserialize;
-use elite_journal::prelude::{Security, Government, Allegiance, Economy, Coordinate};
 use crate::{Body, ControllingFaction, Faction, State};
+use elite_journal::prelude::{Allegiance, Coordinate, Economy, Government, Security};
+use serde::Deserialize;
 // use crate::serde_utils;
 
 /// EDSM's representation of a solar system
