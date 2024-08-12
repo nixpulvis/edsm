@@ -2,6 +2,7 @@ use std::collections::HashMap;
 // use chrono::naive::NaiveDateTime;
 use crate::{Body, ControllingFaction, Faction, State};
 use elite_journal::prelude::{Allegiance, Coordinate, Economy, Government, Security};
+use elite_journal::de::*;
 use serde::Deserialize;
 // use crate::serde_utils;
 
@@ -92,9 +93,15 @@ pub struct Information {
     pub state: Option<State>,
 
     pub population: Option<u64>,
+    #[serde(deserialize_with = "enum_is_null")]
+    #[serde(default)]
     pub security: Option<Security>,
+    #[serde(deserialize_with = "enum_is_null")]
+    #[serde(default)]
     pub economy: Option<Economy>,
     #[serde(rename = "secondEconomy")]
+    #[serde(deserialize_with = "enum_is_null")]
+    #[serde(default)]
     pub second_economy: Option<Economy>,
     // TODO: Add type in elite_journal
     pub reserve: Option<String>,
