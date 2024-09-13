@@ -1,4 +1,3 @@
-#![cfg(unix)]
 use edsm::api::*;
 use elite_journal::{system::Coordinate, Allegiance, Government};
 
