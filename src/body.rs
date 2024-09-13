@@ -10,7 +10,7 @@ pub struct Body {
     pub id: u64,
     pub id64: Option<u64>,
     #[serde(rename = "bodyId")]
-    pub body_id: Option<u64>,
+    pub body_id: Option<i16>,
 
     // NOTE: The tag of details' enum is the body type.
     #[serde(flatten)]
