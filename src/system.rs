@@ -93,14 +93,14 @@ pub struct Information {
     pub state: Option<State>,
 
     pub population: Option<u64>,
-    #[serde(deserialize_with = "enum_is_null")]
+    #[serde(deserialize_with = "null_is_none")]
     #[serde(default)]
     pub security: Option<Security>,
-    #[serde(deserialize_with = "enum_is_null")]
+    #[serde(deserialize_with = "null_is_none")]
     #[serde(default)]
     pub economy: Option<Economy>,
     #[serde(rename = "secondEconomy")]
-    #[serde(deserialize_with = "enum_is_null")]
+    #[serde(deserialize_with = "null_is_none")]
     #[serde(default)]
     pub second_economy: Option<Economy>,
     // TODO: Add type in elite_journal
