@@ -6,7 +6,9 @@ use std::marker::PhantomData;
 use std::str::FromStr;
 
 #[allow(unused)]
-pub fn string_or_struct<'de, T, D>(deserializer: D) -> std::result::Result<T, D::Error>
+pub fn string_or_struct<'de, T, D>(
+    deserializer: D,
+) -> std::result::Result<T, D::Error>
 where
     T: Deserialize<'de> + FromStr<Err = ()>,
     D: Deserializer<'de>,
@@ -41,7 +43,9 @@ where
     deserializer.deserialize_any(StringOrStruct(PhantomData))
 }
 
-pub fn space_seperated_datetime<'de, D>(deserializer: D) -> Result<NaiveDateTime, D::Error>
+pub fn space_seperated_datetime<'de, D>(
+    deserializer: D,
+) -> Result<NaiveDateTime, D::Error>
 where
     D: de::Deserializer<'de>,
 {
@@ -60,7 +64,10 @@ where
         {
             match NaiveDateTime::parse_from_str(value, "%Y-%m-%d %H:%M:%S") {
                 Ok(t) => Ok(t),
-                Err(_) => Err(de::Error::invalid_value(de::Unexpected::Str(value), &self)),
+                Err(_) => Err(de::Error::invalid_value(
+                    de::Unexpected::Str(value),
+                    &self,
+                )),
             }
         }
     }

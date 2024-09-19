@@ -16,33 +16,36 @@ mod sphere {
 
     #[test]
     fn test_systems_sphere_default() {
-        let systems = systems_sphere("Sol", None, None).unwrap_or_else(|e| panic!("{}", e));
+        let systems = systems_sphere("Sol", None, None)
+            .unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(1238, systems.len());
     }
 
     #[test]
     fn test_systems_sphere_max() {
-        let systems =
-            systems_sphere("EV Cancri", Some(100.), None).unwrap_or_else(|e| panic!("{}", e));
+        let systems = systems_sphere("EV Cancri", Some(100.), None)
+            .unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(140, systems.len());
     }
 
     #[test]
     fn test_systems_sphere_float_high() {
-        let systems = systems_sphere("Sol", Some(17.8), None).unwrap_or_else(|e| panic!("{}", e));
+        let systems = systems_sphere("Sol", Some(17.8), None)
+            .unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(83, systems.len());
     }
 
     #[test]
     fn test_systems_sphere_float_low() {
-        let systems = systems_sphere("Sol", Some(17.3), None).unwrap_or_else(|e| panic!("{}", e));
+        let systems = systems_sphere("Sol", Some(17.3), None)
+            .unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(79, systems.len());
     }
 
     #[test]
     fn test_systems_sphere_min_radius() {
-        let systems =
-            systems_sphere("Sol", Some(17.3), Some(10.)).unwrap_or_else(|e| panic!("{}", e));
+        let systems = systems_sphere("Sol", Some(17.3), Some(10.))
+            .unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(66, systems.len());
     }
 
@@ -62,13 +65,15 @@ mod cube {
 
     #[test]
     fn test_systems_cube_default() {
-        let systems = systems_cube("EV Cancri", None).unwrap_or_else(|e| panic!("{}", e));
+        let systems =
+            systems_cube("EV Cancri", None).unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(107, systems.len());
     }
 
     #[test]
     fn test_systems_cube_max() {
-        let systems = systems_cube("EV Cancri", Some(200.)).unwrap_or_else(|e| panic!("{}", e));
+        let systems = systems_cube("EV Cancri", Some(200.))
+            .unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(174, systems.len());
     }
 
@@ -76,13 +81,15 @@ mod cube {
 
     #[test]
     fn test_systems_cube_float_high() {
-        let systems = systems_cube("Sol", Some(24.)).unwrap_or_else(|e| panic!("{}", e));
+        let systems =
+            systems_cube("Sol", Some(24.)).unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(45, systems.len());
     }
 
     #[test]
     fn test_systems_cube_float_low() {
-        let systems = systems_cube("Sol", Some(23.9)).unwrap_or_else(|e| panic!("{}", e));
+        let systems =
+            systems_cube("Sol", Some(23.9)).unwrap_or_else(|e| panic!("{}", e));
         assert_eq!(41, systems.len());
     }
 }
@@ -92,14 +99,7 @@ fn test_system() {
     let system = system("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Sol", system.name);
     assert_eq!(Some(27), system.id);
-    assert_eq!(
-        Some(Coordinate {
-            x: 0.0,
-            y: 0.0,
-            z: 0.0
-        }),
-        system.coords
-    );
+    assert_eq!(Some(Coordinate { x: 0.0, y: 0.0, z: 0.0 }), system.coords);
     assert_eq!(Some(true), system.require_permit);
 }
 
@@ -127,11 +127,9 @@ fn test_factions() {
         Allegiance::Independent,
         controlling_faction.allegiance.unwrap()
     );
-    assert_eq!(
-        Government::Corporate,
-        controlling_faction.government.unwrap()
-    );
-    let total_inf: f64 = system.factions.unwrap().iter().map(|f| f.influence).sum();
+    assert_eq!(Government::Corporate, controlling_faction.government.unwrap());
+    let total_inf: f64 =
+        system.factions.unwrap().iter().map(|f| f.influence).sum();
     // Would be nice if this was 1_000...
     let expected_precision = 100.;
     assert_eq!(

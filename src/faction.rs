@@ -1,4 +1,6 @@
-use elite_journal::prelude::{Allegiance, Government, Happiness, State as JournalState};
+use elite_journal::prelude::{
+    Allegiance, Government, Happiness, State as JournalState,
+};
 use serde::Deserialize;
 use std::collections::HashMap;
 
@@ -111,7 +113,8 @@ mod tests {
         let empty_array = r#"
             []
         "#;
-        let state_history: StateHistory = serde_json::from_str(empty_array).unwrap();
+        let state_history: StateHistory =
+            serde_json::from_str(empty_array).unwrap();
         assert!(matches!(state_history, StateHistory::Empty(_)));
         let object = r#"
             { "123": "foo" }

@@ -2,7 +2,9 @@ use std::collections::HashMap;
 // use chrono::naive::NaiveDateTime;
 use crate::{Body, ControllingFaction, Faction, State};
 use elite_journal::de::*;
-use elite_journal::prelude::{Allegiance, Coordinate, Economy, Government, Security};
+use elite_journal::prelude::{
+    Allegiance, Coordinate, Economy, Government, Security,
+};
 use serde::Deserialize;
 // use crate::serde_utils;
 
@@ -54,7 +56,9 @@ pub struct System {
     pub traffic_breakdown: Option<HashMap<String, u64>>,
 }
 
-fn deserialize_information<'de, T, D>(deserializer: D) -> std::result::Result<T, D::Error>
+fn deserialize_information<'de, T, D>(
+    deserializer: D,
+) -> std::result::Result<T, D::Error>
 where
     T: serde::Deserialize<'de>,
     D: serde::Deserializer<'de>,

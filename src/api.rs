@@ -20,7 +20,9 @@ pub enum Error {
 impl fmt::Display for Error {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         match self {
-            Error::Edsm(s) => write!(f, "{}", s.canonical_reason().unwrap_or("???")),
+            Error::Edsm(s) => {
+                write!(f, "{}", s.canonical_reason().unwrap_or("???"))
+            }
             // The wrapped error contains additional information and is available
             // via the source() method.
             Error::Request(e) => write!(f, "{}", e),
