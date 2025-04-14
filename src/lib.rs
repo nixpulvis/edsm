@@ -1,4 +1,5 @@
 use std::fs::File;
+use std::io::BufReader;
 
 mod serde_utils;
 
@@ -34,5 +35,6 @@ pub mod api;
 
 pub fn json(file_path: &str) -> Vec<System> {
     let file = File::open(file_path).unwrap();
-    serde_json::from_reader(file).unwrap()
+    let reader = BufReader::new(file);
+    serde_json::from_reader(reader).unwrap()
 }
