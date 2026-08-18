@@ -5,7 +5,7 @@ authors = ["Nathan Lilienthal <nathan@nixpulvis.com>"]
 edition = "2018"
 
 [dependencies]
-elite_journal = "0.4"
+elite_journal = "0.5"
 serde = { version = "*", features = ["derive"] }
 serde_json = "*"
 chrono = { version = "*", features = ["serde"] }
