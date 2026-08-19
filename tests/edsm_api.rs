@@ -2,6 +2,7 @@ use edsm::api::*;
 use elite_journal::{system::Coordinate, Allegiance, Government};
 
 #[test]
+#[ignore = "EDSM API returns Too Many Requests"]
 fn test_systems() {
     let system = systems("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert!(system.len() == 1);
