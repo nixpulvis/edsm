@@ -16,6 +16,7 @@ mod sphere {
     use super::*;
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_sphere_default() {
         let systems = systems_sphere("Sol", None, None)
             .unwrap_or_else(|e| panic!("{}", e));
@@ -23,6 +24,7 @@ mod sphere {
     }
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_sphere_max() {
         let systems = systems_sphere("EV Cancri", Some(100.), None)
             .unwrap_or_else(|e| panic!("{}", e));
@@ -30,6 +32,7 @@ mod sphere {
     }
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_sphere_float_high() {
         let systems = systems_sphere("Sol", Some(17.8), None)
             .unwrap_or_else(|e| panic!("{}", e));
@@ -37,6 +40,7 @@ mod sphere {
     }
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_sphere_float_low() {
         let systems = systems_sphere("Sol", Some(17.3), None)
             .unwrap_or_else(|e| panic!("{}", e));
@@ -44,6 +48,7 @@ mod sphere {
     }
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_sphere_min_radius() {
         let systems = systems_sphere("Sol", Some(17.3), Some(10.))
             .unwrap_or_else(|e| panic!("{}", e));
@@ -65,6 +70,7 @@ mod cube {
     use super::*;
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_cube_default() {
         let systems =
             systems_cube("EV Cancri", None).unwrap_or_else(|e| panic!("{}", e));
@@ -72,6 +78,7 @@ mod cube {
     }
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_cube_max() {
         let systems = systems_cube("EV Cancri", Some(200.))
             .unwrap_or_else(|e| panic!("{}", e));
@@ -81,6 +88,7 @@ mod cube {
     // NOTE: The cube API seems to be rounding the size, unlike the radius for the sphere API.
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_cube_float_high() {
         let systems =
             systems_cube("Sol", Some(24.)).unwrap_or_else(|e| panic!("{}", e));
@@ -88,6 +96,7 @@ mod cube {
     }
 
     #[test]
+    #[ignore = "EDSM API returns Too Many Requests"]
     fn test_systems_cube_float_low() {
         let systems =
             systems_cube("Sol", Some(23.9)).unwrap_or_else(|e| panic!("{}", e));
@@ -96,6 +105,7 @@ mod cube {
 }
 
 #[test]
+#[ignore = "EDSM API returns Too Many Requests"]
 fn test_system() {
     let system = system("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Sol", system.name);
@@ -105,6 +115,7 @@ fn test_system() {
 }
 
 #[test]
+#[ignore = "EDSM API returns Too Many Requests"]
 fn test_bodies() {
     let system = bodies("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Sol", system.name);
@@ -117,6 +128,7 @@ fn test_bodies() {
 }
 
 #[test]
+#[ignore = "EDSM API returns Too Many Requests"]
 fn test_factions() {
     let system = factions("Meliae", false).unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Meliae", system.name);
@@ -140,6 +152,7 @@ fn test_factions() {
 }
 
 #[test]
+#[ignore = "EDSM API returns Too Many Requests"]
 fn test_traffic() {
     let system = traffic("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Sol", system.name);
@@ -151,6 +164,7 @@ fn test_traffic() {
 }
 
 #[test]
+#[ignore = "EDSM API returns Too Many Requests"]
 fn test_deaths() {
     let system = deaths("Sol").unwrap_or_else(|e| panic!("{}", e));
     assert_eq!("Sol", system.name);
